@@ -664,7 +664,7 @@ address {
 .hero-title {
   margin-top: 1.4rem;
   font-size: clamp(3.6rem, 7.8vw, 7.6rem);
-  line-height: 0.85;
+  line-height: 0.95;
   letter-spacing: -0.035em;
 }
 
@@ -904,8 +904,7 @@ address {
 .marquee-group span {
   display: flex;
   align-items: center;
-  gap: clamp(1.5rem, 3vw, 3rem);
-  padding: 0.95rem clamp(1.5rem, 3vw, 3rem);
+  padding-block: 0.95rem;
   font-family: var(--serif);
   font-size: clamp(1.05rem, 1.6vw, 1.35rem);
   font-style: italic;
@@ -918,8 +917,10 @@ address {
   content: '';
   width: 0.28rem;
   height: 0.28rem;
+  margin-inline: clamp(1.5rem, 3vw, 3rem);
   border-radius: 50%;
   background: var(--gold);
+  transform: translateY(-0.2em);
 }
 
 @keyframes marquee {
