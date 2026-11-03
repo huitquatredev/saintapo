@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://domaine-st-apollinaire.com/sitemap.xml

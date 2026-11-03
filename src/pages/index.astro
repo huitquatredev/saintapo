@@ -1,0 +1,695 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const stats = [
+  { value: '57', label: 'années en Biodynamie' },
+  { value: '12', suffix: 'ha', label: 'de vignes en Côtes du Rhône' },
+  { value: '1967', label: 'pionnier de la biodynamie' },
+  { value: 'Demeter', small: true, suffix: '& Ecocert', label: 'labellisé & certifié' },
+];
+
+const poissons = [
+  {
+    name: '1, 2, 3 Poissons',
+    type: 'Rosé',
+    image: '/images/PRs.webp',
+    width: 520,
+    height: 1926,
+    alt: 'Bouteille de vin rosé 1, 2, 3 Poissons du Domaine Saint Apollinaire',
+  },
+  {
+    name: 'Poisson blanc',
+    type: 'Blanc',
+    image: '/images/PB.webp',
+    width: 520,
+    height: 1894,
+    alt: 'Bouteille de vin blanc Poisson blanc du Domaine Saint Apollinaire',
+  },
+  {
+    name: 'Poisson rouge',
+    type: 'Rouge',
+    image: '/images/PR.webp',
+    width: 520,
+    height: 1901,
+    alt: 'Bouteille de vin rouge Poisson rouge du Domaine Saint Apollinaire',
+  },
+];
+
+const prestiges = [
+  {
+    name: 'L’Exceptionnel',
+    type: 'Blanc · Viognier',
+    image: '/images/EXCP.webp',
+    width: 520,
+    height: 1822,
+    alt: 'Bouteille de vin blanc L’Exceptionnel du Domaine Saint Apollinaire',
+    text: 'Issu de Viognier, un incontournable par son harmonie et son bouquet floral subtil.',
+  },
+  {
+    name: '1967',
+    type: 'Rouge · Syrah',
+    image: '/images/1967.webp',
+    width: 520,
+    height: 1900,
+    alt: 'Bouteille de vin rouge 1967 du Domaine Saint Apollinaire',
+    text: 'À majorité Syrah, des arômes complexes avec une dominante épicée.',
+  },
+  {
+    name: 'La Quintessence',
+    type: 'Rouge · Grenache & Syrah',
+    image: '/images/QSCE.webp',
+    width: 520,
+    height: 1756,
+    alt: 'Bouteille de vin rouge La Quintessence du Domaine Saint Apollinaire',
+    text: 'Issue de Grenache avec “une pointe” de Syrah. Finesse, élégance : les mots magiques de cette prestigieuse cuvée.',
+  },
+];
+---
+
+<Layout>
+  <Header />
+
+  <main id="contenu">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Bienvenue au Domaine Saint Apollinaire</p>
+          <h1 class="display hero-title">
+            <span>A Puyméras,</span>
+            <span>au pied du</span>
+            <em>Mont Ventoux</em>
+          </h1>
+          <p class="hero-lead">
+            Un lieu discret, charmant et charmeur. Une histoire de famille, de transmission de génération en génération,
+            d’une appétence commune pour la vigne et le vin.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#domaine">
+              Découvrir le domaine
+              <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#rencontrer">Nous rencontrer</a>
+          </div>
+          <p class="hero-note">12 hectares · Côtes du Rhône · Depuis 1967</p>
+        </div>
+
+        <div class="hero-visual">
+          <p class="hero-vertical" aria-hidden="true">Puyméras · Vaucluse · Côtes du Rhône</p>
+
+          <div class="hero-badge" aria-label="57 années en biodynamie">
+            <strong>57</strong>
+            <span>années en<br />Biodynamie</span>
+          </div>
+
+          <figure class="hero-main">
+            <div class="hero-main-img">
+              <img
+                src="/images/elodie.webp"
+                alt="Élodie Daumas, viticultrice au Domaine Saint Apollinaire, dans ses vignes"
+                width="720"
+                height="386"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+            <figcaption>Elodie Daumas, viticultrice passionnée</figcaption>
+          </figure>
+
+          <figure class="hero-small">
+            <div class="hero-small-img">
+              <img
+                src="/images/raisins.webp"
+                alt="Grappes de raisins noirs prêtes pour les vendanges"
+                width="720"
+                height="336"
+                decoding="async"
+              />
+            </div>
+            <figcaption>Des raisins sains !</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Biodynamie depuis 1967</span>
+          <span>Côtes du Rhône</span>
+          <span>Puyméras</span>
+          <span>Mont Ventoux</span>
+          <span>Demeter</span>
+          <span>Ecocert</span>
+          <span>Vins sains</span>
+        </div>
+        <div class="marquee-group">
+          <span>Biodynamie depuis 1967</span>
+          <span>Côtes du Rhône</span>
+          <span>Puyméras</span>
+          <span>Mont Ventoux</span>
+          <span>Demeter</span>
+          <span>Ecocert</span>
+          <span>Vins sains</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bienvenue -->
+    <section class="welcome" id="stapo" aria-labelledby="bienvenue-title">
+      <div class="shell">
+        <div class="welcome-grid">
+          <div class="welcome-copy">
+            <p class="index"><strong>01</strong> — Bienvenue</p>
+            <h2 class="display" id="bienvenue-title" data-reveal>
+              Un <em>lieu</em> discret, charmant et charmeur.
+            </h2>
+
+            <div class="welcome-body" data-reveal="delay-1">
+              <p>
+                Une <em>histoire de famille,</em> de transmission de génération en génération, d’une appétence commune
+                pour la vigne et le vin.
+              </p>
+              <p>
+                <strong>Frédéric Daumas</strong> a été le précurseur et le <strong>pionnier de la biodynamie</strong>
+                appliquée aux vignes et aux vins.
+              </p>
+              <p>
+                Face au Mont Ventoux, c’est maintenant <strong>Elodie Daumas</strong>, sa fille, qui travaille ses
+                <strong>12 hectares de vignes en Côtes du Rhône</strong> toujours dans le respect des principes de la
+                <em>biodynamie</em>.
+              </p>
+              <p>
+                Le Domaine Saint Apollinaire est labellisé <strong>Demeter</strong> et certifié
+                <strong>Ecocert</strong> depuis que cela existe.
+              </p>
+            </div>
+
+            <div class="welcome-actions" data-reveal="delay-2">
+              <a class="btn" href="https://domaine-st-apollinaire.com/rdv-stapo/" target="_blank" rel="noopener noreferrer">
+                L’été à Saint Apo
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+              </a>
+              <a class="link-arrow" href="#domaine">
+                Le Domaine
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32Z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="welcome-media" data-reveal="delay-1">
+            <figure class="welcome-main">
+              <div class="media-frame">
+                <img
+                  src="/images/batisse.webp"
+                  alt="La bâtisse du Domaine Saint Apollinaire, entourée de vignes"
+                  width="720"
+                  height="384"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="media-caption">A Puyméras, au pied du Mont Ventoux</figcaption>
+            </figure>
+
+            <figure class="welcome-offset">
+              <div class="media-frame">
+                <img
+                  src="/images/ventoux.webp"
+                  alt="Le Mont Ventoux sous la lune, aperçu depuis la cour du Domaine"
+                  width="720"
+                  height="312"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="media-caption">A admirer depuis la cour du Domaine</figcaption>
+            </figure>
+
+            <div class="welcome-seal" aria-hidden="true">
+              <span>1967</span>
+              <small>Biodynamie<br />depuis l’origine</small>
+            </div>
+          </div>
+        </div>
+
+        <dl class="stats" data-reveal>
+          {stats.map((stat) => (
+            <div class="stat">
+              <dt>{stat.label}</dt>
+              <dd class:list={[{ 'stat-small': stat.small }]}>
+                {stat.value}
+                {stat.suffix && <span>{stat.suffix}</span>}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+
+    <!-- Le Domaine -->
+    <section class="domaine" id="domaine" aria-labelledby="domaine-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="index"><strong>02</strong> — Le Domaine</p>
+          <h2 class="display" id="domaine-title">Le Domaine</h2>
+          <p class="head-aside">
+            Au Nord-Est du Vaucluse, face au Mont Ventoux et à proximité de Vaison-la-Romaine.
+          </p>
+        </div>
+
+        <div class="domaine-grid">
+          <div class="domaine-text">
+            <p class="domaine-lead" data-reveal>
+              Le <strong>Domaine Saint Apollinaire</strong> est situé au Nord-Est du Vaucluse, au pied du village de
+              Puyméras, face au <strong>Mont Ventoux</strong> et à proximité de <strong>Vaison-la-Romaine</strong>.
+            </p>
+            <p data-reveal="delay-1">
+              Le vignoble est cultivé selon les principes de la <strong>Biodynamie depuis 1967</strong>. Convaincu et
+              engagé, Frédéric Daumas a été un des <strong>pionniers</strong> à élaborer des vins de qualité, des
+              <strong>vins sains</strong> et respectueux de la terre, de la vigne, des récoltes.
+            </p>
+            <p data-reveal="delay-1">
+              La situation géographique du Domaine, au pied du Mont Ventoux, près des
+              <strong>Dentelles de Montmirail</strong>, permet de bénéficier d’un réel atout pour la culture. En effet,
+              les <strong>vignes</strong> sont régulièrement <strong>ventilées</strong> par le Mistral ou le vent du Midi
+              ce qui permet de chasser l’humidité et évite le développement de maladies.
+            </p>
+            <p data-reveal="delay-2">
+              <strong>Elodie Daumas</strong> marche dans les pas de son père, préserve ce terroir rare et précieux. Les
+              vins d’aujourd’hui portent tous une histoire que nous vous invitons à découvrir.
+            </p>
+          </div>
+
+          <div class="domaine-media" data-reveal="delay-1">
+            <figure>
+              <div class="media-frame domaine-main">
+                <img
+                  src="/images/vignes.webp"
+                  alt="Vignes du Domaine Saint Apollinaire avec le Mont Ventoux en arrière-plan"
+                  width="480"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="media-caption">12 hectares de vignes en Côtes du Rhône</figcaption>
+            </figure>
+
+            <div class="domaine-label">
+              <img src="/images/demeter.webp" alt="Logo Demeter" width="450" height="252" loading="lazy" decoding="async" />
+              <p>
+                <strong>Demeter &amp; Ecocert</strong>
+                Labellisé et certifié depuis que cela existe.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="domaine-quote" data-reveal>
+          « Les vins d’aujourd’hui portent tous une histoire que nous vous invitons à découvrir. »
+        </blockquote>
+
+        <div class="coords" data-reveal>
+          <span>44.267654809655056, 5.1259811109694695</span>
+          <span>Plus Code Google — 748G+X9 Puyméras</span>
+          <span>Puyméras · Vaucluse · France</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- La Biodynamie -->
+    <section class="biodynamie" id="biodynamie" aria-labelledby="biodynamie-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="index"><strong>03</strong> — La Biodynamie</p>
+          <h2 class="display" id="biodynamie-title">La Biodynamie <em>?</em></h2>
+          <p class="head-aside">
+            Travailler le sol, la vigne, la récolte et le vin dans le respect du vivant.
+          </p>
+        </div>
+
+        <div class="bio-grid">
+          <div class="bio-media" data-reveal>
+            <div class="bio-manifesto">
+              <p class="bio-manifesto-year">1967</p>
+              <p class="bio-manifesto-text">
+                57 années<br />en Biodynamie
+              </p>
+              <div class="bio-manifesto-foot">
+                <span>Demeter</span>
+                <span>Ecocert</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bio-copy">
+            <h3 data-reveal>Les principes de la <em>biodynamie</em></h3>
+            <p data-reveal="delay-1">
+              La biodynamie, on en parle de plus en plus, mais très souvent, sans trop comprendre. Parfois, la
+              biodynamie est associée à des pratiques qui interpellent et paraissent plus mystiques que organiques. Mais
+              pas du tout !
+            </p>
+            <p data-reveal="delay-1">
+              Appliquer les principes de la biodynamie, c’est travailler ses terres dans un respect du sol, de la vigne,
+              de la récolte et du vin. Il s’agit d’appliquer des règles précises et scientifiques.
+            </p>
+            <p data-reveal="delay-2">
+              Aucun traitement lourd et agressif n’intervient dans le cycle de la vigne et du vin, mais un travail tout
+              au long de l’année dans le respect de la plante, de son environnement et du cycle lunaire.
+            </p>
+            <p class="bio-statement" data-reveal="delay-2">
+              L’idée principale est que l’écosystème peut se suffire à lui-même si rien n’entrave le cycle du vivant.
+            </p>
+          </div>
+        </div>
+
+        <div class="bio-concrete">
+          <h3 data-reveal>Concrètement<em>…</em></h3>
+          <ol class="bio-list">
+            <li data-reveal>
+              <span class="bio-num">01</span>
+              <h4>Des sols dynamisés</h4>
+              <p>
+                A titre d’exemples, les sols sont dynamisés et non fertilisés avec des produits chimiques de synthèse. Des
+                solutions naturelles et non agressives peuvent être utilisées telles que des infusions de plantes.
+              </p>
+            </li>
+            <li data-reveal>
+              <span class="bio-num">02</span>
+              <h4>Le rythme de la plante</h4>
+              <p>
+                Intervenir dans le cycle de vie de la vigne se fait en adéquation avec le rythme de la plante et en
+                considérant son écosystème. Il s’agit par exemple de laisser un enherbement au pied des vignes pour
+                favoriser la pollinisation.
+              </p>
+            </li>
+            <li data-reveal>
+              <span class="bio-num">03</span>
+              <h4>La vendange à la main</h4>
+              <p>
+                Lors des vendanges, la récolte des raisins est manuelle. La vendange à la main permet de cueillir et de
+                trier le raisin sans abîmer la vigne.
+              </p>
+            </li>
+            <li data-reveal>
+              <span class="bio-num">04</span>
+              <h4>Les levures du Domaine</h4>
+              <p>
+                Lors du travail en cave, seules les levures du Domaine sont utilisées, sans ajout de produits chimiques de
+                synthèse.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nos Vins -->
+    <section class="wines" id="vins" aria-labelledby="vins-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="index"><strong>04</strong> — Nos Vins</p>
+          <h2 class="display" id="vins-title">Nos Vins</h2>
+          <p class="head-aside">
+            Deux gammes, une même exigence : des vins sains, vivants et fidèles à leur terroir.
+          </p>
+        </div>
+
+        <div id="poissons">
+          <div class="wine-family-head">
+            <h3 class="display" data-reveal>Notre gamme <em>Poissons</em></h3>
+            <div class="wine-family-intro" data-reveal="delay-1">
+              <p class="wine-kicker">1, 2, 3 Poissons, Poisson blanc et Poisson rouge.</p>
+              <p>
+                Cette gamme fait référence aux 3 femmes du Domaine, Elodie et ses deux filles, toutes les 3 nées un
+                premier avril. Non, ce n’est pas un poisson d’avril. Peut-être la magie de la biodynamie ?
+              </p>
+            </div>
+          </div>
+
+          <div class="wine-stage" data-reveal>
+            <div class="wine-grid">
+              {poissons.map((wine, index) => (
+                <article class="wine-card">
+                  <div class="wine-card-top">
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <span>{wine.type}</span>
+                  </div>
+                  <img
+                    class="wine-bottle"
+                    src={wine.image}
+                    alt={wine.alt}
+                    width={wine.width}
+                    height={wine.height}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="wine-meta">
+                    <h4>{wine.name}</h4>
+                    <p>Côtes du Rhône · {wine.type}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prestige" id="prestige" aria-labelledby="prestige-title">
+      <div class="shell">
+        <div class="wine-family-head">
+          <h3 class="display" id="prestige-title" data-reveal>Nos Vins <em>Prestiges</em></h3>
+          <div class="wine-family-intro" data-reveal="delay-1">
+            <p class="wine-kicker">En blanc &amp; en rouge</p>
+            <p>
+              Une gamme pour celles et ceux qui cherchent des vins avec plus de caractère, plus de complexité et de
+              puissance tout en gardant l’identité des vins du Domaine.
+            </p>
+          </div>
+        </div>
+
+        <div class="prestige-grid">
+          {prestiges.map((wine) => (
+            <article class="prestige-card" data-reveal>
+              <p class="prestige-type">{wine.type}</p>
+              <img
+                class="prestige-bottle"
+                src={wine.image}
+                alt={wine.alt}
+                width={wine.width}
+                height={wine.height}
+                loading="lazy"
+                decoding="async"
+              />
+              <h4>{wine.name}</h4>
+              <p>{wine.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="wines" id="tarifs" aria-labelledby="tarifs-title" style="padding-top: 0;">
+      <div class="shell">
+        <div class="pricing">
+          <div class="pricing-title">
+            <p class="index"><strong>05</strong> — Nos tarifs</p>
+            <h2 class="display" id="tarifs-title" style="font-size: clamp(2.4rem, 4.4vw, 4rem); margin-top: 1rem;">
+              Nos tarifs
+            </h2>
+          </div>
+          <p class="pricing-price">
+            10–14 €
+            <span>TTC / bouteille</span>
+          </p>
+          <div class="pricing-copy">
+            <p>
+              Nous vous proposons une gamme de vins entre 10 et 14 euros TTC par bouteille pour un départ cave auquel
+              devront être ajoutés les coûts de transport. Nous organisons au meilleur coût le transport de nos vins pour
+              qu’ils deviennent les vôtres.
+            </p>
+            <p style="margin-top: 0.9rem;">
+              Contactez-nous pour obtenir plus de détails et un devis :
+              <a href="mailto:domaine-st-apo@orange.fr">domaine-st-apo[a]orange.fr</a>
+            </p>
+          </div>
+          <a class="btn pricing-cta" href="mailto:domaine-st-apo@orange.fr?subject=Demande%20de%20devis">
+            Devis
+            <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nous rencontrer -->
+    <section class="visit" id="rencontrer" aria-labelledby="rencontrer-title">
+      <div class="shell">
+        <div class="visit-grid">
+          <div class="visit-media" id="cave" data-reveal>
+            <figure>
+              <div class="media-frame">
+                <img
+                  src="/images/caveau.webp"
+                  alt="Dégustation de vin au caveau du Domaine Saint Apollinaire"
+                  width="720"
+                  height="540"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption class="media-caption">Le caveau du Domaine</figcaption>
+            </figure>
+            <div class="visit-stamp" aria-hidden="true">
+              <span>Caveau<br />&amp; dégustation</span>
+              <small>Puyméras · Vaucluse</small>
+            </div>
+          </div>
+
+          <div class="visit-copy">
+            <p class="index"><strong>06</strong> — Nous rencontrer</p>
+            <h2 class="display" id="rencontrer-title" data-reveal>Venez nous <em>rencontrer.</em></h2>
+            <p data-reveal="delay-1">
+              Venez découvrir le Domaine et déguster nos vins. Nous vous conterons notre histoire bien particulière.
+            </p>
+            <p data-reveal="delay-1">Nos prochaines dates de salons seront bientôt disponibles.</p>
+
+            <dl class="visit-info" data-reveal="delay-2">
+              <div>
+                <dt>Adresse</dt>
+                <dd>
+                  Domaine Saint Apollinaire<br />
+                  90 route de Faucon<br />
+                  84110 Puyméras, France
+                </dd>
+              </div>
+              <div>
+                <dt>Téléphone</dt>
+                <dd><a class="visit-phone" href="tel:+33664290104">06 64 29 01 04</a></dd>
+              </div>
+              <div>
+                <dt>Plus Code Google</dt>
+                <dd>748G+X9 Puyméras</dd>
+              </div>
+              <div>
+                <dt>GPS</dt>
+                <dd>44.267654809655056, 5.1259811109694695</dd>
+              </div>
+            </dl>
+
+            <div class="visit-actions" data-reveal="delay-2">
+              <a class="btn" href="https://maps.app.goo.gl/A3S9tXhmgzsuoMoPA" target="_blank" rel="noopener noreferrer">
+                Préparez votre visite
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+              </a>
+              <a class="link-arrow" href="mailto:domaine-st-apo@orange.fr">Nous écrire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actualités -->
+    <section class="news" id="actualites" aria-labelledby="actualites-title">
+      <div class="shell">
+        <div class="section-head" id="actu">
+          <p class="index"><strong>07</strong> — Actualités</p>
+          <h2 class="display" id="actualites-title">Actualités</h2>
+          <p class="head-aside">Salons, rendez-vous au Domaine et soirées d’été.</p>
+        </div>
+
+        <div class="news-actions" data-reveal>
+          <a class="news-link" href="https://domaine-st-apollinaire.com/rdv-stapo/" target="_blank" rel="noopener noreferrer">
+            <span class="news-link-top">
+              01 — Été 2026
+              <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+            </span>
+            <h3>L’été à <em>Saint Apo</em></h3>
+          </a>
+          <a class="news-link" href="https://domaine-st-apollinaire.com/rdv-stapo/" target="_blank" rel="noopener noreferrer">
+            <span class="news-link-top">
+              02 — Programmation
+              <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+            </span>
+            <h3>Les Rendez-vous de <em>Saint Apo</em></h3>
+          </a>
+        </div>
+
+        <div class="news-grid">
+          <div class="salons" id="salons" data-reveal>
+            <div class="salons-head">
+              <h3>Salons 2026</h3>
+              <span>A venir</span>
+            </div>
+            <ul class="salon-list">
+              <li class="salon">
+                <span class="salon-date">21 et 22 novembre 2026</span>
+                <span class="salon-name">Vin Boire Bio</span>
+                <span class="salon-place">St Amand en Puisaye (58)</span>
+              </li>
+              <li class="salon">
+                <span class="salon-date">28 et 29 novembre 2026</span>
+                <span class="salon-name">ViniDames</span>
+                <span class="salon-place">VILLEBAROU (41)</span>
+              </li>
+              <li class="salon">
+                <span class="salon-date">11, 12 et 13 décembre 2026</span>
+                <span class="salon-name">Asphodèle</span>
+                <span class="salon-place">Pau (64)</span>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="summer" data-reveal="delay-1">
+            <p class="summer-label">Tous les lundis de juillet et aout</p>
+            <h3>Soirée bar à vin</h3>
+            <p>
+              (sauf durant la fête votive du village), soirée bar à vin : dégustation et ventes de vin, restauration sur
+              place avec Le Meilleur pour La Faim.
+            </p>
+            <p class="summer-reserve">Pensez à réserver vos cuvées !</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presse -->
+    <section class="press" id="presse" aria-labelledby="presse-title">
+      <div class="shell">
+        <div class="press-inner">
+          <div class="press-title">
+            <p class="index"><strong>08</strong> — Presse</p>
+            <h2 class="display" id="presse-title" data-reveal>On parle de <em>nous…</em></h2>
+          </div>
+
+          <ul class="press-list" id="media" data-reveal="delay-1">
+            <li class="press-item">
+              <a class="press-link" href="https://www.vitisphere.com/actualite-85457-les-50-ans-de-biodynamie-au-domaine-saint-apollinaire.html" target="_blank" rel="noopener noreferrer">
+                <span class="press-source">Vitisphère</span>
+                <span class="press-subject">Les 50 ans</span>
+                <span class="press-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 256 256" fill="currentColor"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+                </span>
+              </a>
+            </li>
+            <li class="press-item">
+              <a class="press-link" href="https://www.ledauphine.com/vaucluse/2017/05/11/journee-festive-au-domaine-saint-apollinaire-ce-samedi" target="_blank" rel="noopener noreferrer">
+                <span class="press-source">Le Dauphiné</span>
+                <span class="press-subject">Les 50 ans</span>
+                <span class="press-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 256 256" fill="currentColor"><path d="M200 56v72a8 8 0 0 1-16 0V81.66L77.66 188a8 8 0 0 1-11.32-11.32L172.69 70.34H120a8 8 0 0 1 0-16h72a8 8 0 0 1 8 8Z"/></svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
